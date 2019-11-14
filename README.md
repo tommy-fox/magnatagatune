@@ -37,7 +37,7 @@ The accuracy was still around 0.9818 and loss became stagnant around 9th epoch. 
 After that, we first tried adding the third set of batch-normalization + dropout + fully connected layers, and training the model only for 5 epochs.
 Comparing with the first 5 epochs of previous models, the result hasn’t improved much. Loss even converged slightly slower than
 
-training with 2 sets of regularization layers, however test accuracy was able to be kept above 0.9819. <br><br>
+training with 2 sets of regularization layers, however test accuracy was able to be kept above 0.9819. <br>
 
 Then we tried using the ​autopool​ layer to replace the last global averaging pooling layer in VGGish.
  
