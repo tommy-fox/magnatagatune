@@ -3,7 +3,7 @@
 Our group addressed problem of musical genre classification, which is a subset of audio classifcation in general. <br> <br>
 
 We utilized transfer learning to train a convolutional neural network for a multi-label classification, using each audio sample’s mel spectrogram images as input features. The model was based on the VGG model trained for audio files with ‘audioset’, namely “VGGish”. Our final testing accuracy across all genres was 98%. <br>
-<center><img src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/accuracy_plot.png" width="500" height="400" alt="centered image" /> </center>
+<center><img src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/accuracy_plot.png" width="500" height="400" class="center" /> </center>
 <br> <br>
 
 <b> Data and Preprocessing </b><br>
