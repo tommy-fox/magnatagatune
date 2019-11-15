@@ -2,7 +2,9 @@
 <b>Overview</b><br>
 Our group addressed problem of musical genre classification, which is a subset of audio classifcation in general. <br> <br>
 
-We utilized transfer learning to train a convolutional neural network for a multi-label classification, using each audio sample’s mel spectrogram images as input features. The model was based on the VGG model trained for audio files with ‘audioset’, namely “VGGish”. Our final testing accuracy across all genres was 98%. <br><br> 
+We utilized transfer learning to train a convolutional neural network for a multi-label classification, using each audio sample’s mel spectrogram images as input features. The model was based on the VGG model trained for audio files with ‘audioset’, namely “VGGish”. Our final testing accuracy across all genres was 98%. <br>
+![alt test](https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/accuracy_plot.png)
+<br> <br>
 
 <b> Data and Preprocessing </b><br>
 We used the magnatagatune dataset, obtained from the MIREX website, which consists of over 20,000 mono audio files each 30 seconds long. We used 75% of the data for training and 25% for testing. The dataset consisted of raw audio files, classified into 188 genre classes specified in a CSV file. <br><br>
@@ -20,7 +22,7 @@ With 12 epochs and batch size of 32, the model was trained iteratively using the
 
 <b> Experiments </b><br>
 In our preliminary experiment, we added 2 sets of batch-normalization + drop-out + fully connected layers on top of the VGGish model (one using a rectified linear unit activation function and the ending dense layer using softmax activation function).
-Six convolutional layers and 4 max pooling layers are interlaid in the VGGish model, followed by a global average pooling layer. <br> <br>
+Six convolutional layers and 4 max pooling layers are interlaid in the VGGish model, followed by a global average pooling layer. <br><br>
 
 The accuracy of this model started near 98% and did not stray very far from this throughout training.
 We hypothesize that the model was fairly accurate at the onset due to VGGish having already been trained on a large number of audio signals.
@@ -30,7 +32,9 @@ The preliminary training used training set size / batch size steps per epoch, wh
 Thus, the training session performed more iterations of optimizations and the loss converged more noticeably. <br><br>
 
 One odd result from this model is that the validation accuracy is constantly higher than accuracy.
-After researching, we found out that the addition of dropout layers prompted this to happen, as all features being used during test and yields more robust results.
+After researching, we found out that the addition of dropout layers prompted this to happen, as all features being used during test and yields more robust results.<br>
+
+![alt test](https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/model_summary.png) <br><br>
 
 In following experiments, we revised the steps per epoch to actual number of pickle files divided by batch size. 
 The accuracy was still around 0.9818 and loss became stagnant around 9th epoch. <br><br>
