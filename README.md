@@ -1,7 +1,6 @@
 # magnatagatune
-Music genre classification project with magnatagatune dataset
- Music Genre Classification Project Report
-Our group addressed problem of music genre classification. <br> <br>
+<b>Project Report</b>
+Our group addressed problem of musical genre classification. <br> <br>
 
 Our project utilized transfer learning to train a convolutional neural network for a multi-label music genre classification problem, using each audio sample’s mel spectrogram images as features. The model was based on the VGG model trained for audio files with ‘audioset’, namely “VGGish”. <br><br> 
 
