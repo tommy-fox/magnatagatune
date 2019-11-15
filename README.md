@@ -3,7 +3,7 @@
 Our group addressed problem of musical genre classification, which is a subset of audio classifcation in general. <br> <br>
 
 We utilized transfer learning to train a convolutional neural network for a multi-label classification, using each audio sample’s mel spectrogram images as input features. The model was based on the VGG model trained for audio files with ‘audioset’, namely “VGGish”. Our final testing accuracy across all genres was 98%. <br>
-<center><img src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/accuracy_plot.png" width="500" height="400" class="center" /> </center>
+<img align="center" width="500" height="400" src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/accuracy_plot.png">
 <br> <br>
 
 <b> Data and Preprocessing </b><br>
@@ -34,7 +34,8 @@ Thus, the training session performed more iterations of optimizations and the lo
 One odd result from this model is that the validation accuracy is constantly higher than accuracy.
 After researching, we found out that the addition of dropout layers prompted this to happen, as all features being used during test and yields more robust results.<br>
 <center>
-<img src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/model_summary.png" width="400" height="500" alt="centered image" /> </center> <br><br>
+ 
+ <img align="center" width="500" height="400" src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/model_summary.png"> <br><br>
 
 In following experiments, we revised the steps per epoch to actual number of pickle files divided by batch size. 
 The accuracy was still around 0.9818 and loss became stagnant around 9th epoch. <br><br>
