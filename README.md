@@ -8,7 +8,7 @@ We utilized transfer learning to train a convolutional neural network for a mult
 We used the magnatagatune dataset, obtained from the MIREX website, which consists of over 20,000 mono audio files each 30 seconds long. We used 75% of the data for training and 25% for testing. The dataset consisted of raw audio files, classified into 188 genre classes specified in a CSV file. <br><br>
 
 We used Librosa to load audio files, then divided each sample into 30 roughly 1-second(0.96 seconds) segments. From this, we extracted Mel spectrograms, designating resolution to be 64 frequency bins and 96 time frames. As a result, the features extracted for each audio clip are a tensor of (30,96,64). <br>
-Finally we randomly selected one (96,64) slice out of this tensor and designated it as the input to the network. To improve training speed, we preprocessed all audio files and stored the Mel spectrograms along with the class label in Pickle files on our virtual machine. <br><br><br>
+Finally we randomly selected one (96,64) slice out of this tensor and designated it as the input to the network. To improve training speed, we preprocessed all audio files and stored the Mel spectrograms along with the class label in Pickle files on our virtual machine. <br><br>
 
 <b> Training </b><br>
 We trained the network using a GPU installed on a virtual machine instance provided by the Google Cloud Platform. <br>
