@@ -16,7 +16,7 @@ The feature extraction method closely follows the ​VGGish network​ Github re
  
 In order to use batch processing, we implemented a custom data generator with pescador,
 which multiplexed 20 active streamers that stochastically fetched spectrograms from our data subsets.
-With 12 epochs and batch size of 32, the model was trained iteratively using the adam optimizer and binary cross entropy loss function. <br><br><br>
+With 12 epochs and batch size of 32, the model was trained iteratively using the adam optimizer and binary cross entropy loss function. <br><br>
 
 <b> Experiments </b><br>
 In our preliminary experiment, we added 2 sets of batch-normalization + drop-out + fully connected layers on top of the VGGish model (one using a rectified linear unit activation function and the ending dense layer using softmax activation function).
