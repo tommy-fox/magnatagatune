@@ -36,10 +36,11 @@ Thus, the training session performed more iterations of optimizations and the lo
 
 One odd result from this model is that the validation accuracy is constantly higher than accuracy.
 After researching, we found out that the addition of dropout layers prompted this to happen, as all features being used during test and yields more robust results.<br>
-<center>
- 
+
  <p align="center">
  <b> Optimal Model Summary </b>
+ </p>
+ <p align="center">
  <img width="450" height="600" src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/model_summary.png"> 
  </p>
  <br><br>
