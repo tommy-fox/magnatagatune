@@ -2,7 +2,7 @@
 <b>Overview</b><br>
 Our group addressed problem of musical genre classification, which is a subset of audio classifcation in general. <br> <br>
 
-We utilized transfer learning to train a convolutional neural network for a multi-label classification, using each audio sample’s mel spectrogram images as input features. The model was based on the VGG model trained for audio files with ‘audioset’, namely “VGGish”. <br><br> 
+We utilized transfer learning to train a convolutional neural network for a multi-label classification, using each audio sample’s mel spectrogram images as input features. The model was based on the VGG model trained for audio files with ‘audioset’, namely “VGGish”. Our final testing accuracy across all genres was 98%. <br><br> 
 
 <b> Data and Preprocessing </b><br>
 We used the magnatagatune dataset, obtained from the MIREX website, which consists of over 20,000 mono audio files each 30 seconds long. We used 75% of the data for training and 25% for testing. The dataset consisted of raw audio files, classified into 188 genre classes specified in a CSV file. <br><br>
@@ -36,9 +36,7 @@ In following experiments, we revised the steps per epoch to actual number of pic
 The accuracy was still around 0.9818 and loss became stagnant around 9th epoch. <br><br>
 
 After that, we first tried adding the third set of batch-normalization + dropout + fully connected layers, and training the model only for 5 epochs.
-Comparing with the first 5 epochs of previous models, the result hasn’t improved much. Loss even converged slightly slower than
-
-training with 2 sets of regularization layers, however test accuracy was able to be kept above 0.9819. <br>
+Comparing with the first 5 epochs of previous models, the result hasn’t improved much. Loss even converged slightly slower than training with 2 sets of regularization layers, however test accuracy was able to be kept above 0.9819. <br>
 
 We ultimately tried using the ​autopool​ layer to replace the last global averaging pooling layer in VGGish.
  
