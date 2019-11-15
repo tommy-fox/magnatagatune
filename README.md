@@ -39,6 +39,7 @@ After researching, we found out that the addition of dropout layers prompted thi
 <center>
  
  <p align="center">
+ <b> Optimal Model Summary </b>
  <img width="450" height="600" src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/model_summary.png"> 
  </p>
  <br><br>
