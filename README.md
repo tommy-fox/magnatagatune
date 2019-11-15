@@ -5,9 +5,9 @@ Our group addressed problem of musical genre classification, which is a subset o
 We utilized transfer learning to train a convolutional neural network for a multi-label classification, using each audio sample’s mel spectrogram images as input features. The model was based on the VGG model trained for audio files with ‘audioset’, namely “VGGish”. Our final testing accuracy across all genres was 98%. <br>
 
 <p align="center">
-<img width="500" height="400" src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/accuracy_plot.png">
+<img width="400" height="300" src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/accuracy_plot.png">
 </p>
-<br> <br>
+<br>
 
 <b> Data and Preprocessing </b><br>
 We used the magnatagatune dataset, obtained from the MIREX website, which consists of over 20,000 mono audio files each 30 seconds long. We used 75% of the data for training and 25% for testing. The dataset consisted of raw audio files, classified into 188 genre classes specified in a CSV file. <br><br>
@@ -39,7 +39,7 @@ After researching, we found out that the addition of dropout layers prompted thi
 <center>
  
  <p align="center">
- <img width="500" height="400" src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/model_summary.png"> 
+ <img width="450" height="600" src="https://raw.githubusercontent.com/tommy-fox/magnatagatune/master/model_summary.png"> 
  </p>
  <br><br>
 
